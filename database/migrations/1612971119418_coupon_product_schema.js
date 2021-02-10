@@ -9,7 +9,7 @@ class CouponProductSchema extends Schema {
       table.increments()
       table.integer('coupon_id').unsigned()
       table.integer('product_id').unsigned()
-      table.foreign('cupon_id').references('id').inTable('coupons').onDelete('cascade')
+      table.foreign('coupon_id').references('id').inTable('coupons').onDelete('cascade')
       table.foreign('product_id').references('id').inTable('products').onDelete('cascade')
       table.timestamps()
     })
